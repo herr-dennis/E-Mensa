@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>News Letter</title>
+   <style>
+      form{
+        border: 2px solid black;
+
+      }
+      #checkboxes{
+          border: 2px solid black;
+          margin:10px;
+      }
+      #names{
+          border: 2px solid black;
+          margin:10px;
+      }
+       #names input[type="text"]{
+           margin: 7px;
+       }
+       #names input[type="date"]{
+           margin: 7px;
+       }
+
+   </style>
+
+</head>
+<body>
+
+  <div>
+
+    <form name="form" action="formdata.html" method="post">
+
+       <div id = checkboxes>
+
+       <p><strong> Anrede </strong></p>
+       <label for="check_1"> Frau: </label>
+       <input type = "checkbox" name = "frau" value = "1" id = "check_1" ><br>
+       <label for = check_2>Man:</label>
+       <input type = "checkbox" name = "mann" value = "1" id = "check_2"><br>
+       </div>
+
+        <div id = names>
+
+      <label for =vorname>Vorname*</label><br>
+      <input type="text" name="text_vorname" id="vorname" value = "Bitte geben Sie ihren Vornamen ein" ><br>
+       <label for =nachname > Nachname* </label><br>
+            <input type = "text" name="nachname" value = "Bitte geben Sie ihren Nachname ein" id = nachname><br>
+         <label for = email_>E-Mail*</label><br>
+            <input type = "text" value="Bitte geben Sie ihre Email ein" name="email" id =email_><br>
+          <label for="date_check">Benachrichtigungsintervall</label><br>
+          <input type="date"  name = "dateIntervall" id="date_check"><br>
+            <input type="checkbox"  name="datenschutz" id="checkbox_datenshutz" required>
+          <label for = checkbox_datenshutz> Datenschutzhinweise </label>
+          <br>
+            <input type = submit value = "Absenden" >
+          <p>*) Eingaben sind Pflicht!</p>
+
+        </div>
+
+
+    </form>
+
+
+  </div>
+
+</body>
+</html>

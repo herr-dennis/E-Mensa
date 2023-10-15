@@ -1,0 +1,64 @@
+<!--
+- Praktikum DBWT. Autoren:
+- Vorname1, Nachname1, Matrikelnummer1
+- Vorname2, Nachname2, Matrikelnummer2
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speiseplan</title>
+
+    <style>
+
+        table{
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid black
+        }
+
+    </style>
+</head>
+<body>
+<div id =tabelle>
+
+    <table>
+
+        <tr id = ersteZeile>
+            <th>Art       </th>
+            <th>Gericht    </th>
+            <th>Preis</th>
+            <th> Werktag</th>
+            <th> Wochenende</th>
+            <th> Inthaltsstoffe</th>
+        </tr>
+         <tr id = zweiteZeile>
+             <td> Vegetarisch</td>
+             <td> Kürbis-Chia-Teller</td>
+             <td> 2,10</td>
+             <td colspan="2" rowspan="2" > Ganze Woche</td>
+             <td> </td>
+         </tr>
+          <tr id = dritteZeile>
+           <td  rowspan="2">Pasta</td>
+           <td>Spaghetti Carciofo</td>
+           <td>3,50</td>
+           <td>A, A1</td>
+        </tr>
+         <tr id = vierteZeile>
+             <td>Bandnudeln</td>
+             <td>3,50</td>
+             <td></td>
+             <td>x</td>
+             <td>A,D,A1</td>
+         </tr>
+
+
+    </table>
+
+</div>
+
+</body>
+</html>
