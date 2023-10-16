@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Übung</title>
+    <style>
+
+        #etabelle{ border: 2px solid rgba(255, 140, 0, 0.5);}
+        tr  th {background: rgba(255, 140, 0, 0.5);}
+        p a { color: rgba(255, 140, 0, 0.5);}
+        hr{border-color: rgba(255, 140, 0, 0.5);)}
+        .tab{background: rgba(255, 140, 0, 0.5);}
+        table { margin-left: 11%}
+        ul{ list-style: none }
+        .grid-list{
+
+            display:grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 2px;
+             margin-left: 45%;
+
+        }
+         .grid-list  li {
+             border-left: 1px solid darkorange;
+             padding-left: 10%;
+        }
+
+         .center{
+             text-align: center;
+             margin-left: 20px;
+             clear: both;
+
+         }
+
+    </style>
+</head>
+<body>
+<main>
+    <div class="elektro zeile">
+        <h1 id="elektro">Wofür steht das E in E-Mensa?</h1>
+        <p>Am besten zeigt man das in einer <a href="#etabelle">Tabelle</a>.</p>
+        <table id="etabelle">
+            <thead>
+            <tr>
+                <th>Bedeutung</th>
+                <th>Philosophie</th>
+                <th>Beispiele</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Elektro</td>
+                <td>Alles geht elektronisch</td>
+                <td>
+                    <ol>
+                        <li class="pflicht">Bestellung digital</li>
+                        <li class="pflicht">Bezahlen digital</li>
+                        <li>Essen digital</li>
+                        <li>Spülen digital</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td class = tab>Extravagant</td>
+                <td class = tab>Es gibt auch Ausgefallenes</td>
+                <td class = tab><p>Wir sind die einzige Mensa weit und breit mit </p>
+                    <ol>
+                        <li class="pflicht">Vanillesauerkraut</li>
+                        <li class="pflicht">Bohnensenfbrot</li>
+                        <li>Habaneroeiscreme</li>
+                        <li>Bananengulasch</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>Effizient</td>
+                <td>Schnell, lecker und qualitativ</td>
+                <td>
+                    <ol>
+                        <li class="pflicht">Frisch für Sie zubereitet, wann Sie es wollen</li>
+                        <li class="pflicht">Die Zutaten sind nachverfolgbar und immer tiefgekühlt</li>
+                        <li>Wir haben auch Samstags geöffnet. Sie sehen, wie effizient wir sind.</li>
+                    </ol>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="center">Da geht natürlich noch viel mehr, siehe nur <abbr title="Extra">E</abbr>.<br>Die Tabelle ist
+            aber schon ganz schön imposant so oder?</p>
+    </div>
+</main>
+<hr>
+<footer>
+    <ul class="grid-list">
+        <li>(c) DBWT</li>
+        <li>Hilfe</li>
+        <li>Datenschutz</li>
+        <li>Impressum</li>
+    </ul>
+</footer>
+</body>
+</html>
