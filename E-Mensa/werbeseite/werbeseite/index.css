@@ -1,0 +1,101 @@
+* {
+
+    font-family: "Papyrus", cursive, sans-serif;
+
+}
+
+header {
+    display: flex;
+}
+
+header a {
+    margin-right: 20px;
+    padding: 19px;
+
+}
+
+header > img {
+    padding-right: 20px;
+}
+
+.headerlinks {
+    display: flex;
+    border: 2px solid slategray;
+    text-underline: grey;
+
+}
+
+main {
+    display: grid;
+    place-content: center;
+
+}
+
+a {
+
+    color: slategray;
+}
+
+hr {
+    margin-top: 10px;
+}
+
+#newstab th {
+    padding: 5px;
+    border: 2px solid slategrey;
+
+}
+
+.text {
+    max-width: 600px;
+    border: 2px solid slategray;
+    display: flex;
+    place-items: center;
+}
+
+
+#preistab th {
+    border: 2px solid slategray
+}
+
+tr td {
+    border: 2px solid slategray
+}
+
+#logo {
+    border: 2px solid slategray;
+    margin-right: 20px;
+}
+
+footer {
+    display: flex;
+}
+
+footer p {
+    margin-right: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50%;
+    place-content: center;
+
+}
+
+#mensabild {
+    display: grid;
+    place-items: center;
+    position: relative;
+
+
+}
+
+#head_bild {
+
+    border: 4px solid slategrey;
+}
+
+html {
+    border: 2px solid slategrey;
+}
