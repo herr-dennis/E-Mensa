@@ -4,38 +4,50 @@
     <meta charset="UTF-8">
     <title>Ihre E-Mensa</title>
     <style>
+
    header {
        display: flex;
    }
+   header a{
+       margin-right: 20px;
+       padding: 19px;
+
+   }
+   header > img{ padding-right: 20px;}
+
+   .headerlinks{
+       display: flex;
+       border: 2px solid slategray;
+       text-underline: grey;
+
+   }
+
    main{
        padding-left: 5%;
    }
    a {
 
-       text-overline-color: grey;
+       color: slategray;
    }
    hr {
-       margin-top: 20px;
+       margin-top: 10px;
    }
-   #newstab th{
-       margin-right: 40px;
+   #newstab   th{
+       padding: 10px;
+
    }
    .text{
        max-width: 600px;
-       border: 2px dotted slategray;
+       border: 2px solid slategray;
    }
-     header a{
-         margin-right: 20px;
-         padding: 19px;
-         color: slategray;
-     }
-   header > img{ padding-right: 20px;}
-   #preistab { border : 1px solid dimgrey}
-   #preistab th { border:1px solid dimgrey}
-   tr  td { border: 1px solid dimgrey}
+
+
+
+   #preistab th { border:1px solid slategray}
+   tr  td { border: 1px solid slategray}
 
    #logo{
-       border:2px dotted slategray;
+       border:2px solid slategray;
        margin-right: 20px;
    }
    footer{
@@ -47,14 +59,17 @@
    form{
        display: flex;
        flex-direction: column;
+       margin-right: 80%;
 
    }
-   .headerlinks{
-       display: flex;
-       border: 2px dotted slategray;
-       text-underline: grey;
+   #mensa bild{
 
+       margin-left: 20%;
    }
+   #head_bild{
+       margin-left: 5%;
+   }
+
 
     </style>
 </head>
@@ -71,6 +86,16 @@
       </div>
 </header>
 <hr>
+
+   <div id="mensa bild">
+
+       <img id="head_bild" src="mensa.jpg" alt = "Mensa_Bild">
+   </div>
+
+
+
+
+
     <main>
 
                <h2>Bald gibt es Essen auch online!</h2>
@@ -105,16 +130,16 @@
                </table>
 
         <h2>E-Mensa in Zahlen</h2>
-                        <table id=newstab>
+                        <table >
 
-                            <tr>
+                            <tr id=newstab>
                                 <th> x Besuche</th>
                                 <th> y Anmeldungen<br>zum Newsletter</th>
                                 <th> Speisen </th>
                             </tr>
                         </table>
 
-        <h2>Interesse geweckt? Wir informieren Sie! </h2>
+        <h2 id>Interesse geweckt? Wir informieren Sie! </h2>
 
 
 
@@ -124,7 +149,13 @@
             <input type="text" id="name">
              <label for = email> Ihre E-Mail</label>
                 <input type = "text" id = email>
-                  <input type = "range" name = Deutsch>
+            <label for="farbe">Sprache des Newsletters:</label>
+            <select id="farbe" name="farbe">
+                <option value="Deutsch">Deutsch</option>
+                <option value="Englisch">Englisch</option>
+                <option value="Norwegisch">Norwegisch</option>
+
+            </select>
                     <label for="check">Den Datenschutzbestimmungen stimme ich zu</label>
                    <input type ="checkbox" required id="check">
                        <input type="submit" >
