@@ -1,0 +1,10 @@
+Bewertungen,Bewertungen
+Gericht,Gericht
+Text,Text
+Sterne,Sterne
+Sprache,Sprachen
+Autoren,Autoren
+Allergen, Allergen
+Beschreibung,Beschreibung anzeigen?
+Suchen,Suchen
+Insgesamt,Insgesamt

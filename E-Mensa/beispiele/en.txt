@@ -1,0 +1,10 @@
+    Bewertungen,Ratings
+    Gericht,Dish
+    Text,Text
+    Sterne,Stars
+    Sprache,Language
+    Autoren,Authors
+    Allergen,Allergen
+    Beschreibung,Description?
+    Suchen,Search
+    Insgesamt,totals

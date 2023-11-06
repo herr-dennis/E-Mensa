@@ -1,3 +1,37 @@
+
+<?php
+/**
+ *Gerichte.php "Datenbank" der Texte der Gerichte und Bilder
+ *Save_User_Dates stellt eine Funktion: save_dates() die Benutzer-E-Mail in einer Textdatei speichert.
+ */
+include "Gerichte.php";
+include "Save_User_Dates.php";
+const GET_NAME ="name";
+const GET_EMAIL ="email";
+const GET_LANG="lang";
+$gerichte = take_gerichte();
+$email=false;
+
+
+if(!empty($_POST[GET_NAME])&&!empty($_POST[GET_EMAIL])){
+    $name_text = trim($_POST[GET_NAME]);
+    $email_text = $_POST[GET_EMAIL];
+
+    if(filter_var($email_text, FILTER_VALIDATE_EMAIL)){
+        $email=true;
+        save_dates($name_text,$email_text);
+    }else{
+        $email=false;
+    }
+
+}
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -52,20 +86,28 @@
             <th>Preis intern</th>
             <th>Preis extern</th>
         </tr>
-        <tr>
-            <td>Rindfleisch mit Bambus, Kaiserschoten<br>
-                mit roten Paprika, dazu Nudeln
-            </td>
-            <td>3,50 &euro;</td>
-            <td>7,50 &euro;</td>
-        </tr>
-        <tr>
-            <td>Spinatrisotto mit kleinen Samosateigecken<br>
-                und gemischter Salta
-            </td>
-            <td>3,50 &euro;</td>
-            <td>6,41 &euro;</td>
-        </tr>
+
+        <?php
+           foreach ($gerichte as $item){
+               echo "<tr>
+                           <td>";echo $item['gericht'];
+               echo "</td>";
+               echo "<td>";
+                         echo $item['preis_i']. "€";
+                         echo "</td>";
+
+                 echo "<td>";
+                         echo $item['preis_e']. "€";
+                         echo "</td>";
+
+               echo "</tr>";
+               $k = $item['bild'];
+               echo "</tr><td colspan='3' class='bilder'> <img src='$k' alt='Bilder Essen'></td></tr>";
+
+
+              }
+        ?>
+
         <tr>
             <td>...</td>
             <td>...</td>
@@ -92,14 +134,22 @@
     <h2 id>Interesse geweckt? Wir informieren Sie! </h2>
 
 
-    <form id="form1" method="post" action="index.html">
+    <form id="form1" method="post" action="#form1">
 
         <label for="name">Ihr Name </label>
-        <input type="text" id="name">
-        <label for="email"> Ihre E-Mail</label>
-        <input type="text" id="email">
+        <input type="text" id="name" name="name">
+
+        <?php if($email){
+             echo "<label for='email'> Ihre E-Mail</label>";
+            echo "<input type='text' id='email' name='email'>";
+        }
+        else{
+            echo "<label for='email'> Ihre E-Mail</label>";
+            echo "<input type='text' id='wrong' name='email' value='Falsche Eingabe!'>";
+        }
+        ?>
         <label for="farbe">Sprache des Newsletters:</label>
-        <select id="farbe" name="farbe">
+        <select id="farbe" name="lang">
             <option value="Deutsch">Deutsch</option>
             <option value="Englisch">Englisch</option>
             <option value="Norwegisch">Norwegisch</option>
@@ -108,6 +158,13 @@
         <label for="check">Den Datenschutzbestimmungen stimme ich zu:</label>
         <input type="checkbox" required id="check">
         <input type="submit">
+
+        <?php
+         if($email){
+             echo "<label id='save'> Wunderbar! E-Mail verschickt</label>";
+         }
+
+         ?>
 
     </form>
 

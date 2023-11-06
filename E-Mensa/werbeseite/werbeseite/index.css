@@ -45,7 +45,10 @@ hr {
     border: 2px solid slategrey;
 
 }
+ .bilder{
 
+     text-align: center;
+ }
 .text {
     max-width: 600px;
     border: 2px solid slategray;
@@ -53,7 +56,18 @@ hr {
     place-items: center;
 }
 
+#wrong{
 
+    color: red;
+
+}
+
+#save{
+    color: green;
+    margin-top: 3px;
+    text-align: center;
+
+}
 #preistab th {
     border: 2px solid slategray
 }
