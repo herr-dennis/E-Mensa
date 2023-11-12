@@ -1,8 +1,12 @@
 <?php
-
+/**
+ * Praktikum DBWT. Autoren:
+ * Dennis, Schwarz, 3557435
+ * Przemyslaw, Slusarczyk, 3278806
+ */
 function take_gerichte () :array{
 $arr_gerichte =[];
-$file = fopen('gerichte.txt', 'r');
+$file = fopen('daten/gerichte.txt', 'r');
 
 if(!($file)){
 

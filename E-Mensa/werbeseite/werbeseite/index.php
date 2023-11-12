@@ -1,34 +1,48 @@
 
 <?php
+
+/**
+ * Praktikum DBWT. Autoren:
+ * Dennis, Schwarz, 3557435
+ * Przemyslaw, Slusarczyk, 3278806
+ */
+
+
+
 /**
  *Gerichte.php "Datenbank" der Texte der Gerichte und Bilder
  *Save_User_Dates stellt eine Funktion: save_dates() die Benutzer-E-Mail in einer Textdatei speichert.
  */
 include "Gerichte.php";
 include "Save_User_Dates.php";
+include "Zahlen_verwaltung.php";
 const GET_NAME ="name";
 const GET_EMAIL ="email";
 const GET_LANG="lang";
 $gerichte = take_gerichte();
 $email=false;
+$name_validate = false;
+$default = true;
+$counts = get_counts();
+set_count_besucher();
+$anzahl_gerichte = count($gerichte);
 
+$clientIP = $_SERVER['REMOTE_ADDR'];
+echo "Die IP-Adresse des Clients ist: " . $clientIP;
 
-if(!empty($_POST[GET_NAME])&&!empty($_POST[GET_EMAIL])){
+if($_GET['pushed']='Datensenden'){
+if(!empty($_POST[GET_NAME])){
     $name_text = trim($_POST[GET_NAME]);
-    $email_text = $_POST[GET_EMAIL];
-
-    if(filter_var($email_text, FILTER_VALIDATE_EMAIL)){
-        $email=true;
-        save_dates($name_text,$email_text);
-    }else{
-        $email=false;
+    $lang_text = $_POST[GET_LANG];
+    if(strlen($name_text!=0)){
+        $name_validate=true;$default=false;
+    }}
+    if(!empty($_POST[GET_EMAIL])){
+        $email_text = $_POST[GET_EMAIL];
+        if(filter_var($email_text, FILTER_VALIDATE_EMAIL)){
+            $email=true;$default=false;}
+        }
     }
-
-}
-
-
-
-
 
 ?>
 
@@ -44,26 +58,31 @@ if(!empty($_POST[GET_NAME])&&!empty($_POST[GET_EMAIL])){
 <body>
 
 <header id="header">
-    <img id="logo" alt="Mensa-Logo">
+    <img src="img/mensa_logo.jpg" id="logo" alt="Mensa-Logo">
     <div class="headerlinks">
-        <a href="index.html">Ankündigung</a>
-        <a href="index.html">Zahlen</a>
-        <a href="index.html">Speisen</a>
-        <a href="index.html">Wichtig für uns</a>
+        <a href="#übersicht">Ankündigung</a>
+        <a href="#newstab">Zahlen</a>
+        <a href="#preistab">Speisen</a>
+        <a href="#footer">Wichtig für uns</a>
     </div>
 </header>
 <hr>
 
-<div id="mensabild">
-
-    <img id="head_bild" src="mensa.jpg" alt="Mensa_Bild">
-</div>
 
 
 <main>
 
+
+    <div id="mensabild">
+
+        <img id="head_bild" src="img/mensa.jpg" alt="Mensa_Bild">
+    </div>
+
+
+
+
     <h2>Bald gibt es Essen auch online!</h2>
-    <div class="text">
+    <div class="text" id="übersicht">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
         sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
         nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
@@ -107,27 +126,22 @@ if(!empty($_POST[GET_NAME])&&!empty($_POST[GET_EMAIL])){
 
               }
         ?>
-
-        <tr>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-        </tr>
     </table>
 
     <h2>E-Mensa in Zahlen</h2>
     <table>
 
         <tr id="newstab">
-            <th> x Besuche</th>
-            <th> y Anmeldungen<br>zum Newsletter</th>
-            <th> Speisen</th>
+
+            <th> Besucher</th>
+            <th> Anmeldungen<br>zum Newsletter</th>
+            <th> Gerichte</th>
         </tr>
         <tr>
 
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
+            <td class="zahlen"><?php echo $counts['besucher'] ?></td>
+            <td class="zahlen"><?php echo $counts['newsletter']?></td>
+            <td class="zahlen"><?php echo $anzahl_gerichte?></td>
         </tr>
     </table>
 
@@ -135,19 +149,11 @@ if(!empty($_POST[GET_NAME])&&!empty($_POST[GET_EMAIL])){
 
 
     <form id="form1" method="post" action="#form1">
+        <label for =name>Namen eingeben</label>
+        <input type='text' id='name' name='name'>
+        <label for='email'> Ihre E-Mail</label>
+        <input type='text' id='email' name='email'>
 
-        <label for="name">Ihr Name </label>
-        <input type="text" id="name" name="name">
-
-        <?php if($email){
-             echo "<label for='email'> Ihre E-Mail</label>";
-            echo "<input type='text' id='email' name='email'>";
-        }
-        else{
-            echo "<label for='email'> Ihre E-Mail</label>";
-            echo "<input type='text' id='wrong' name='email' value='Falsche Eingabe!'>";
-        }
-        ?>
         <label for="farbe">Sprache des Newsletters:</label>
         <select id="farbe" name="lang">
             <option value="Deutsch">Deutsch</option>
@@ -157,12 +163,26 @@ if(!empty($_POST[GET_NAME])&&!empty($_POST[GET_EMAIL])){
         </select>
         <label for="check">Den Datenschutzbestimmungen stimme ich zu:</label>
         <input type="checkbox" required id="check">
-        <input type="submit">
+        <input type="submit" name="pushed" value="Datensenden" >
 
         <?php
-         if($email){
+        if(!$default){
+         if($email&&$name_validate){
+
              echo "<label id='save'> Wunderbar! E-Mail verschickt</label>";
+             save_dates($name_text, $email_text, $lang_text);
          }
+         if(!$email&&!$name_validate){
+
+             echo "<label id='wrong'> Ungültiger Name und Email!</label>";
+         }
+         elseif (!$email){
+             echo "<label id='wrong'> Email nicht gültig!</label>";
+         }
+         elseif (!$name_validate){
+             echo "<label id='wrong'> Name nicht gültig</label>";
+         }}
+
 
          ?>
 
@@ -179,7 +199,7 @@ if(!empty($_POST[GET_NAME])&&!empty($_POST[GET_EMAIL])){
 
 </main>
 <hr>
-<footer>
+<footer id="footer">
     <p>&copy E-Mensa GmbH</p>
     <p>Namen..</p>
     <p><a href="http://localhost:8080">Impressum</a></p>

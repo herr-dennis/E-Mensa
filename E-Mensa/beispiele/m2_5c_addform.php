@@ -2,7 +2,7 @@
 /**
  * Praktikum DBWT. Autoren:
  * Dennis, Schwarz, 3557435
- * Vorname2, Nachname2, Matrikelnummer2
+ * Przemyslaw, Slusarczyk, 3278806
  */
 const GET_ADD_1 = "wert1";
 const GET_ADD_2 = "wert2";

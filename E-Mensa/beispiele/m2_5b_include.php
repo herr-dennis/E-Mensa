@@ -2,7 +2,7 @@
 /**
  * Praktikum DBWT. Autoren:
  * Dennis, Schwarz, 3557435
- * Vorname2, Nachname2, Matrikelnummer2
+ * Przemyslaw, Slusarczyk, 3278806
  */
 include "m2_5a_standardparameter.php";
 

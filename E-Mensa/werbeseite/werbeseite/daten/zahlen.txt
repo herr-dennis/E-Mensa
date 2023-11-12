@@ -1,0 +1,3 @@
+besucher=80
+gerichte=2
+newsletter=37

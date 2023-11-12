@@ -3,7 +3,7 @@
 /**
  * Praktikum DBWT. Autoren:
  * Dennis, Schwarz, 3557435
- * Vorname2, Nachname2, Matrikelnummer2
+ * Przemyslaw, Slusarczyk, 3278806
  */
 function add ( int $wert1, int $wert2=0 ): int{
 

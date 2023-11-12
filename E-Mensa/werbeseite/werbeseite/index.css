@@ -14,10 +14,6 @@ header a {
 
 }
 
-header > img {
-    padding-right: 20px;
-}
-
 .headerlinks {
     display: flex;
     border: 2px solid slategray;
@@ -27,7 +23,8 @@ header > img {
 
 main {
     display: grid;
-    place-content: center;
+    place-content:center;
+
 
 }
 
@@ -50,7 +47,7 @@ hr {
      text-align: center;
  }
 .text {
-    max-width: 600px;
+    max-width: 500px;
     border: 2px solid slategray;
     display: flex;
     place-items: center;
@@ -79,6 +76,7 @@ tr td {
 #logo {
     border: 2px solid slategray;
     margin-right: 20px;
+    place-content: center;
 }
 
 footer {
@@ -100,7 +98,10 @@ form {
 #mensabild {
     display: grid;
     place-items: center;
+     margin-right: auto;
     position: relative;
+    right: 51px;
+
 
 
 }
@@ -112,4 +113,7 @@ form {
 
 html {
     border: 2px solid slategrey;
+}
+.zahlen{
+    text-align: center;
 }
