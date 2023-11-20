@@ -1,3 +1,3 @@
-besucher=80
+besucher=117
 gerichte=2
-newsletter=37
+newsletter=47

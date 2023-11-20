@@ -8,7 +8,7 @@
 $GET_SUCHWORT = 'suchwort';
 $suche=false;
 $file = fopen("en_show.txt", 'r');
-
+$über= [];
 if(!$file){
     die("en_show.txt kann nicht geöffnet werden");
 }
@@ -20,7 +20,9 @@ else{
         $line = fgets($file);
 
         if(str_contains($line, $suchwort)){
+
             $suche=true;
+            $über= explode($line,';',2);
             break;
         }
 
@@ -38,7 +40,7 @@ else{
 
 
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <title>Suche</title>
         <meta charset="UTF-8">
@@ -56,6 +58,7 @@ else{
             <?php if($suche===true){
 
                 echo "<p> Suche erfolgreich! $suchwort wurde gefunden!</p>";
+                echo "<p> var_dump($über)$über[1]</p>";
 
             } ?>
         </main>

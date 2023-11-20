@@ -19,31 +19,58 @@ include "Zahlen_verwaltung.php";
 const GET_NAME ="name";
 const GET_EMAIL ="email";
 const GET_LANG="lang";
-$gerichte = take_gerichte();
+const GET_Checked ='checkpushed';
+/*Attribute zum Überprüfen der Eingaben */
 $email=false;
 $name_validate = false;
 $default = true;
+
+$link = mysqli_connect(
+    "localhost", // Host der Datenbank
+    "root", // Benutzername zur Anmeldung
+    "ihesp", // Passwort zur Anmeldung
+    "emensawerbeseite") // Auswahl der Datenbank
+    ;
+if (!$link) {
+    echo "Verbindung fehlgeschlagen: ", mysqli_connect_error();
+    exit();
+}
+/*Funktionen zur dynamischen Abfrage*/
+$gerichte = take_gerichte();
 $counts = get_counts();
 set_count_besucher();
 $anzahl_gerichte = count($gerichte);
-
+/*Blacklist von E-Mails*/
+$en_emails=['rcpt.at', 'damnthespam.at','wegwerfmail.de','trashmail.'];
 $clientIP = $_SERVER['REMOTE_ADDR'];
 echo "Die IP-Adresse des Clients ist: " . $clientIP;
 
-if($_GET['pushed']='Datensenden'){
-if(!empty($_POST[GET_NAME])){
-    $name_text = trim($_POST[GET_NAME]);
-    $lang_text = $_POST[GET_LANG];
-    if(strlen($name_text!=0)){
-        $name_validate=true;$default=false;
-    }}
-    if(!empty($_POST[GET_EMAIL])){
-        $email_text = $_POST[GET_EMAIL];
-        if(filter_var($email_text, FILTER_VALIDATE_EMAIL)){
-            $email=true;$default=false;}
+if(!empty($_POST[GET_Checked])) {
+    if ($_GET['pushed'] = 'Datensenden') {
+        if (!empty($_POST[GET_NAME])) {
+            $name_text = trim($_POST[GET_NAME]);
+            $lang_text = $_POST[GET_LANG];
+            if (strlen($name_text != 0)) {
+                $name_validate = true;
+                $default = false;
+            }
+        }
+        if (!empty($_POST[GET_EMAIL])) {
+            $email_text = $_POST[GET_EMAIL];
+            if (filter_var($email_text, FILTER_VALIDATE_EMAIL)) {
+
+                $email = true;
+                $default = false;
+                foreach ($en_emails as $item) {
+                    if (str_contains($email_text, $item)) {
+                        $email = false;
+                    }
+                }
+
+            }
         }
     }
-
+}
 ?>
 
 <!DOCTYPE html>
@@ -162,7 +189,7 @@ if(!empty($_POST[GET_NAME])){
 
         </select>
         <label for="check">Den Datenschutzbestimmungen stimme ich zu:</label>
-        <input type="checkbox" required id="check">
+        <input type="checkbox" required id="check" name="checkpushed" value="checked">
         <input type="submit" name="pushed" value="Datensenden" >
 
         <?php
@@ -189,7 +216,7 @@ if(!empty($_POST[GET_NAME])){
     </form>
 
     <ul>
-        <h2>Das ist uns wichtig!</h2>
+        <li><h2>Das ist uns wichtig!</h2></li>
         <li>Beste frische saisonale Zutaten</li>
         <li>Ausgewogene abwechslungsreiche Gerichte</li>
         <li>Sauberkeit</li>
