@@ -10,22 +10,8 @@
         </node>
       </scope>
     </mapping>
-  </component>
-  <component name="SqlDataSourceStorage">
-    <option name="dataSources">
-      <list>
-        <State>
-          <option name="id" value="7a1698a8-c4c5-4fde-9bab-78c2bf43b7d1" />
-          <option name="name" value="@localhost (DDL)" />
-          <option name="dbmsName" value="MARIADB" />
-          <option name="urls">
-            <array>
-              <option value="file://$PROJECT_DIR$" />
-            </array>
-          </option>
-          <option name="outLayout" value="File per object by schema.groovy" />
-        </State>
-      </list>
-    </option>
+    <mapping uuid="b127c40c-ecdc-4183-bbb7-6ce2535f03f3" name="@localhost [2] Mapping">
+      <data-sources db="cf6a7efa-3641-4fd1-b020-e7845e3dddf0" ddl="7a1698a8-c4c5-4fde-9bab-78c2bf43b7d1" />
+    </mapping>
   </component>
 </project>
