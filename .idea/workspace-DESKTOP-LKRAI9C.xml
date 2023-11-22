@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c67460a-705e-428c-a076-b9d9a1227d7b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/E-Mensa/beispiele/m2_7b_showtext.php" beforeDir="false" afterPath="$PROJECT_DIR$/E-Mensa/beispiele/m2_7b_showtext.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-Mensa/werbeseite/werbeseite/daten/Benutzerdaten.txt" beforeDir="false" afterPath="$PROJECT_DIR$/E-Mensa/werbeseite/werbeseite/daten/Benutzerdaten.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-Mensa/werbeseite/werbeseite/daten/zahlen.txt" beforeDir="false" afterPath="$PROJECT_DIR$/E-Mensa/werbeseite/werbeseite/daten/zahlen.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-Mensa/werbeseite/werbeseite/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/E-Mensa/werbeseite/werbeseite/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2Wr7ATO8hHmSFUX0rjQsrx9IbiT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Constants&quot;: &quot;false&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/herrd/OneDrive/Repository_Dennis/E-Mensa&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\herrd\OneDrive\Repository_Dennis\E-Mensa\E-Mensa\werbeseite\werbeseite\daten" />
+      <recent name="C:\Users\herrd\OneDrive\Repository_Dennis\E-Mensa\E-Mensa\werbeseite\werbeseite\img" />
+      <recent name="C:\Users\herrd\OneDrive\Repository_Dennis\E-Mensa\E-Mensa\beispiele" />
+      <recent name="C:\Users\herrd\Repository_Dennis\E-Mensa\E-Mensa\werbeseite\werbeseite" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Built-in Web Server.Prakitum_Sever">
+    <configuration name="Prakitum_Sever" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="5200">
+      <method v="2" />
+    </configuration>
+    <configuration name="m2_5d_array.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/E-Mensa/beispiele/m2_5d_array.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="meal.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/E-Mensa/beispiele/meal.php">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c67460a-705e-428c-a076-b9d9a1227d7b" name="Changes" comment="" />
+      <created>1697478702520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697478702520</updated>
+      <workItem from="1697478704626" duration="7876000" />
+      <workItem from="1697569068659" duration="2000" />
+      <workItem from="1697569098881" duration="1948000" />
+      <workItem from="1697578246454" duration="2319000" />
+      <workItem from="1698613259930" duration="619000" />
+      <workItem from="1698870393933" duration="1519000" />
+      <workItem from="1698946200166" duration="6795000" />
+      <workItem from="1699052636496" duration="267000" />
+      <workItem from="1699103620238" duration="14521000" />
+      <workItem from="1699133915465" duration="906000" />
+      <workItem from="1699194802716" duration="14615000" />
+      <workItem from="1699214377500" duration="8744000" />
+      <workItem from="1699223676323" duration="4306000" />
+      <workItem from="1699265889523" duration="4661000" />
+      <workItem from="1699347940433" duration="257000" />
+      <workItem from="1699348208884" duration="220000" />
+      <workItem from="1699353299721" duration="2549000" />
+      <workItem from="1699442114013" duration="10292000" />
+      <workItem from="1699469934211" duration="6048000" />
+      <workItem from="1699606393941" duration="885000" />
+      <workItem from="1699953455896" duration="11000" />
+      <workItem from="1699953497617" duration="91000" />
+      <workItem from="1699967245711" duration="4514000" />
+      <workItem from="1699972821312" duration="46000" />
+      <workItem from="1700039524476" duration="1242000" />
+      <workItem from="1700564876087" duration="91000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

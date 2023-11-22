@@ -13,9 +13,10 @@
  *Gerichte.php "Datenbank" der Texte der Gerichte und Bilder
  *Save_User_Dates stellt eine Funktion: save_dates() die Benutzer-E-Mail in einer Textdatei speichert.
  */
-include "Gerichte.php";
+include "Bilder.php";
 include "Save_User_Dates.php";
 include "Zahlen_verwaltung.php";
+include "db_handling.php";
 const GET_NAME ="name";
 const GET_EMAIL ="email";
 const GET_LANG="lang";
@@ -25,18 +26,10 @@ $email=false;
 $name_validate = false;
 $default = true;
 
-$link = mysqli_connect(
-    "localhost", // Host der Datenbank
-    "root", // Benutzername zur Anmeldung
-    "ihesp", // Passwort zur Anmeldung
-    "emensawerbeseite") // Auswahl der Datenbank
-    ;
-if (!$link) {
-    echo "Verbindung fehlgeschlagen: ", mysqli_connect_error();
-    exit();
-}
 /*Funktionen zur dynamischen Abfrage*/
-$gerichte = take_gerichte();
+$gerichte = take_meals();
+$bilder = take_img(count($gerichte)+7);
+$allergens = take_allergens();
 $counts = get_counts();
 set_count_besucher();
 $anzahl_gerichte = count($gerichte);
@@ -134,21 +127,29 @@ if(!empty($_POST[GET_Checked])) {
         </tr>
 
         <?php
+        $temp_bild=0;
            foreach ($gerichte as $item){
+
                echo "<tr>
-                           <td>";echo $item['gericht'];
+                           <td>";echo $item['name'];
                echo "</td>";
                echo "<td>";
-                         echo $item['preis_i']. "€";
+                         echo $item['preisintern']. "€";
                          echo "</td>";
 
                  echo "<td>";
-                         echo $item['preis_e']. "€";
+                         echo $item['preisextern']. "€";
                          echo "</td>";
 
                echo "</tr>";
-               $k = $item['bild'];
-               echo "</tr><td colspan='3' class='bilder'> <img src='$k' alt='Bilder Essen'></td></tr>";
+               $temp_bild= $temp_bild+1;
+               echo "</tr><td colspan='3' class='bilder'> <img src='$bilder[$temp_bild]' alt='Bilder Essen'></td></tr>";
+               foreach ($allergens as $j){
+               if($j['name']===$item['name']){
+                   $allergen = $j['allergen_codes'];
+                   break;
+               }}
+               echo  "<tr> <td colspan='3'>Allergene: $allergen </td></tr>";
 
 
               }
