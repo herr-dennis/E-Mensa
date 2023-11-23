@@ -7,8 +7,6 @@
  * Przemyslaw, Slusarczyk, 3278806
  */
 
-
-
 /**
  *Gerichte.php "Datenbank" der Texte der Gerichte und Bilder
  *Save_User_Dates stellt eine Funktion: save_dates() die Benutzer-E-Mail in einer Textdatei speichert.
@@ -26,13 +24,23 @@ $email=false;
 $name_validate = false;
 $default = true;
 
-/*Funktionen zur dynamischen Abfrage*/
+//Abfrage von Gerichten an die DB
 $gerichte = take_meals();
+//Funktion die ein Array mit Pfaden von Bildern gibt.
 $bilder = take_img(count($gerichte)+7);
+//Abfrage von allergens an die DB
 $allergens = take_allergens();
+//Funktion die in der Datei die Besucheranzahl inkrementiert.
+set_besucheranzahl();
+//Lädt die Besucherzahl aus der DB
+$besucher_anzahl = get_besucheranzahl();
+//Funktion, die die Zahlen aus der Datei list.
 $counts = get_counts();
-set_count_besucher();
+//Bestimmt die Anzahl der Gerichte aus dem Array.
 $anzahl_gerichte = count($gerichte);
+//Abfrage von Allergen/Code für die Legende
+$code_allergene= take_code_allergens();
+
 /*Blacklist von E-Mails*/
 $en_emails=['rcpt.at', 'damnthespam.at','wegwerfmail.de','trashmail.'];
 $clientIP = $_SERVER['REMOTE_ADDR'];
@@ -154,6 +162,41 @@ if(!empty($_POST[GET_Checked])) {
 
               }
         ?>
+
+        <tr>
+           <th colspan="3">Legende Allergene:</th>
+
+         <tr>
+
+                <?php
+                $halbeAnzahl = ceil(count($code_allergene) / 2);
+                $gesplittet = array_chunk($code_allergene, $halbeAnzahl);
+
+                $erstesArray = $gesplittet[0];
+                $zweiterArray = $gesplittet[1];
+                echo " <td class='allergens' >";
+                foreach ($erstesArray as $value => $item){
+                    echo $item['code']."  ".$item['name'];
+                     if($value != array_key_last($erstesArray)){
+                         echo "<br>";
+                     }
+                }
+                echo "</td>";
+
+                echo " <td class='allergens'  colspan='2'>";
+                foreach ($zweiterArray as $value => $item){
+                    echo $item['code']." ".$item['name']."<br>";
+
+                }
+                echo "</td>";
+
+
+
+                ?>
+
+
+
+        </tr>
     </table>
 
     <h2>E-Mensa in Zahlen</h2>
@@ -167,7 +210,7 @@ if(!empty($_POST[GET_Checked])) {
         </tr>
         <tr>
 
-            <td class="zahlen"><?php echo $counts['besucher'] ?></td>
+            <td class="zahlen"><?php echo $besucher_anzahl ?></td>
             <td class="zahlen"><?php echo $counts['newsletter']?></td>
             <td class="zahlen"><?php echo $anzahl_gerichte?></td>
         </tr>
@@ -229,7 +272,7 @@ if(!empty($_POST[GET_Checked])) {
 <hr>
 <footer id="footer">
     <p>&copy E-Mensa GmbH</p>
-    <p>Namen..</p>
+    <p>Schwarz, Slusarczyk</p>
     <p><a href="http://localhost:8080">Impressum</a></p>
 </footer>
 <hr>

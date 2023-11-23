@@ -100,9 +100,12 @@ form {
     place-items: center;
      margin-right: auto;
     position: relative;
-    right: 51px;
+    right: 51px;}
 
 
+.allergens{
+
+    width: 50%;
 
 }
 

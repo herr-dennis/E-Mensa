@@ -4,7 +4,11 @@
  * Dennis, Schwarz, 3557435
  * Przemyslaw, Slusarczyk, 3278806
  */
-
+/**
+ * @return string[] gibt einen Array zurück dort sind die gespeicherten Zahlen
+ * aus der Datei zahlen.txt drin,
+ * Die Funktion liest die Zahlen aus der Datei.
+ */
 function get_counts(): array
 {
     $zahlen=['besucher'=>'0','gerichte'=>'0','newsletter'=>'0'];
@@ -42,6 +46,9 @@ function get_counts(): array
     return $zahlen;
 }
 
+/**
+ * Inkrementiert in der Datei zahlen.txt die Besucher.
+ */
 function set_count_besucher(){
 
     /**
@@ -73,7 +80,9 @@ function set_count_besucher(){
 
 }
 
-
+/**
+ * Inkrementiert in der Datei zahlen.txt die Anzahl der Newsletter.
+ */
 function set_count_newsletter(){
 
     /**

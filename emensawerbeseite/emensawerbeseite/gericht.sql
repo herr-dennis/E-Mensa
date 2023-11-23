@@ -11,6 +11,8 @@ create table emensawerbeseite.gericht
     preisextern  double       not null
         check (`preisextern` >= `preisintern`),
     constraint name
+        unique (name),
+    constraint name_2
         unique (name)
 );
 

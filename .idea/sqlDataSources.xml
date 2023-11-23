@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DdlMappings">
-    <mapping uuid="8f8f2ab1-a5cd-4e61-a271-f6654f174105" name="@localhost Mapping">
-      <data-sources db="531cb0bb-a342-4e38-88b9-208aab9ede34" ddl="7a1698a8-c4c5-4fde-9bab-78c2bf43b7d1" />
+    <mapping uuid="c491eb56-4c36-4ba8-b232-c74bf8cd835b" name="DDL data source Mapping">
+      <data-sources db="07a52cfe-568b-4849-a3ca-f16faf0db226" ddl="63437751-6d7d-408a-8a52-9a2d48694835" />
       <scope>
-        <node negative="1">
-          <node kind="database" negative="1" />
-          <node kind="schema" qname="emensawerbeseite" />
-        </node>
+        <node kind="schema" qname="emensawerbeseite" />
       </scope>
     </mapping>
-    <mapping uuid="b127c40c-ecdc-4183-bbb7-6ce2535f03f3" name="@localhost [2] Mapping">
-      <data-sources db="cf6a7efa-3641-4fd1-b020-e7845e3dddf0" ddl="7a1698a8-c4c5-4fde-9bab-78c2bf43b7d1" />
-    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="63437751-6d7d-408a-8a52-9a2d48694835" />
+          <option name="name" value="DDL data source" />
+          <option name="dbmsName" value="MARIADB" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/emensawerbeseite" />
+            </array>
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
+      </list>
+    </option>
   </component>
 </project>
