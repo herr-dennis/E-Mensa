@@ -22,6 +22,17 @@
           </option>
           <option name="outLayout" value="File per object by schema.groovy" />
         </State>
+        <State>
+          <option name="id" value="875c726b-d73a-4b7e-b5ce-50d8014de488" />
+          <option name="name" value="DDL data source" />
+          <option name="dbmsName" value="MARIADB" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/emensawerbeseite/emensawerbeseite" />
+            </array>
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
       </list>
     </option>
   </component>
