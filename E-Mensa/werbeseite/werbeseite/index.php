@@ -15,10 +15,13 @@ include "Bilder.php";
 include "Save_User_Dates.php";
 include "Zahlen_verwaltung.php";
 include "db_handling.php";
+include  "CRFS_handling.php";
 const GET_NAME ="name";
 const GET_EMAIL ="email";
 const GET_LANG="lang";
 const GET_Checked ='checkpushed';
+
+$CSRF_token = "839f2gfb2ub";
 /*Attribute zum Überprüfen der Eingaben */
 $email=false;
 $name_validate = false;
@@ -33,7 +36,7 @@ $allergens = take_allergens();
 //Funktion die in der Datei die Besucheranzahl inkrementiert.
 set_besucheranzahl();
 //Lädt die Besucherzahl aus der DB
-$besucher_anzahl = get_besucheranzahl();
+$besucher_anzahl =get_besucheranzahl();
 //Funktion, die die Zahlen aus der Datei list.
 $counts = get_counts();
 //Bestimmt die Anzahl der Gerichte aus dem Array.
@@ -51,6 +54,8 @@ if(!empty($_POST[GET_Checked])) {
         if (!empty($_POST[GET_NAME])) {
             $name_text = trim($_POST[GET_NAME]);
             $lang_text = $_POST[GET_LANG];
+            $lang_text = htmlspecialchars($lang_text);
+            $name_text =htmlspecialchars($name_text);
             if (strlen($name_text != 0)) {
                 $name_validate = true;
                 $default = false;
@@ -58,6 +63,7 @@ if(!empty($_POST[GET_Checked])) {
         }
         if (!empty($_POST[GET_EMAIL])) {
             $email_text = $_POST[GET_EMAIL];
+            $email_text = htmlspecialchars($email_text);
             if (filter_var($email_text, FILTER_VALIDATE_EMAIL)) {
 
                 $email = true;
@@ -221,9 +227,9 @@ if(!empty($_POST[GET_Checked])) {
 
     <form id="form1" method="post" action="#form1">
         <label for =name>Namen eingeben</label>
-        <input type='text' id='name' name='name'>
+        <input type='text' id='name' name='name' value= '<?php echo htmlspecialchars($value, ENT_QUOTES, 'UTF-8'); ?>'>
         <label for='email'> Ihre E-Mail</label>
-        <input type='text' id='email' name='email'>
+        <input type='text' id='email' name='email' >
 
         <label for="farbe">Sprache des Newsletters:</label>
         <select id="farbe" name="lang">
@@ -235,6 +241,7 @@ if(!empty($_POST[GET_Checked])) {
         <label for="check">Den Datenschutzbestimmungen stimme ich zu:</label>
         <input type="checkbox" required id="check" name="checkpushed" value="checked">
         <input type="submit" name="pushed" value="Datensenden" >
+        <input type="hidden" name="CSRF-Token" value="839f2gfb2ub">;
 
         <?php
         if(!$default){
