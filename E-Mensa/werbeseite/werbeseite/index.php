@@ -131,6 +131,13 @@ if(!empty($_POST[GET_Checked])) {
         faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat,
         leo eget bibendum sodales, augue velit cursus nunc,
     </div>
+
+    <div>
+        <hr>
+        <p>Möchten Sie ihr Wunschgerichte eintragen, das können sie hier machen:</p>
+        <a id="link_wunsch" href="wunschgericht.php"> Zu ihrem Wunschgericht</a>
+        <hr>
+    </div>
     <h2>Köstlichkeiten die Sie erwarten!</h2>
 
     <table id="preistab">
@@ -241,7 +248,7 @@ if(!empty($_POST[GET_Checked])) {
         <label for="check">Den Datenschutzbestimmungen stimme ich zu:</label>
         <input type="checkbox" required id="check" name="checkpushed" value="checked">
         <input type="submit" name="pushed" value="Datensenden" >
-        <input type="hidden" name="CSRF-Token" value="839f2gfb2ub">;
+        <input type="hidden" name="CSRF-Token" value="839f2gfb2ub">
 
         <?php
         if(!$default){
