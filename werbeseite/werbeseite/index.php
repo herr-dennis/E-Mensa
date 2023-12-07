@@ -284,7 +284,7 @@ if(!empty($_POST[GET_Checked])) {
 
 </main>
 <hr>
-<footer id="footer">
+<footer >
     <p>&copy E-Mensa GmbH</p>
     <p>Schwarz, Slusarczyk</p>
     <p><a href="http://localhost:8080">Impressum</a></p>

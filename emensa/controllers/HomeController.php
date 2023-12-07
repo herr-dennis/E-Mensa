@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/E-Mensa/emensa/models/gericht.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/emensa/models/gericht.php');
 
 /* Datei: controllers/HomeController.php */
 class HomeController

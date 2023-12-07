@@ -1,6 +1,6 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/E-Mensa/emensa/models/gericht.php');
-require_once($_SERVER['DOCUMENT_ROOT'].'/E-Mensa/emensa/models/kategorie.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/emensa/models/gericht.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/emensa/models/kategorie.php');
 
 class DemoController
 {

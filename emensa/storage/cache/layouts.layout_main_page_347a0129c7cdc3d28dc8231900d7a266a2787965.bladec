@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+ <link rel="stylesheet" type="text/css" href='/emensa/views/examples/pages/main.css'>
+ <style>
+ main{
+ display: grid;
+ place-content: center;
+ }
+
+ footer{
+ display: flex;
+ flex-direction: row;
+
+ }
+ </style>
+ <title><?php echo $this->yieldContent('title'); ?></title>
+ <meta charset="UTF-8">
+</head>
+<body>
+
+<header>
+ <?php $this->startSection('header'); ?>
+
+ <?php echo $this->yieldSection(); ?>
+
+</header>
+<main>
+ <div>
+ <h2><?php echo $this->yieldContent('überschrift'); ?></h2>
+ </div>
+
+ <?php $this->startSection('main-content'); ?>
+ <?php echo $this->yieldSection(); ?>
+</main>
+<footer id="footer">
+ <?php $this->startSection('footer'); ?>
+ <?php echo $this->yieldSection(); ?>
+</footer>
+</body>
+</html>

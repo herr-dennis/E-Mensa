@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <style>
+ td{
+ border: 2px solid grey;
+ padding: 5px;
+ }
+
+ main{
+
+ border: 2px dotted red;
+ }
+
+ .sidebar{
+ width: 20%;
+ border: 2px solid green;
+ margin-top: 10%;
+ }
+
+
+ </style>
+ <title>App Name - <?php echo $this->yieldContent('title'); ?></title>
+</head>
+<body>
+<?php echo $this->yieldContent('which_side'); ?>
+<main>
+<?php $this->startSection('main-content'); ?>
+<?php echo $this->yieldSection(); ?>
+<div class="sidebar" >
+<?php $this->startSection('sidebar'); ?>
+ Master sidebar.
+<?php echo $this->yieldSection(); ?>
+</div>
+<div class="container">
+ <?php echo $this->yieldContent('content'); ?>
+</div>
+</main>
+
+<footer>
+ <?php $this->startSection('footer'); ?>
+ <p>&copy; Ich bin ein Fuß</p>
+ <?php echo $this->yieldSection(); ?>
+</footer>
+</body>
+</html>
