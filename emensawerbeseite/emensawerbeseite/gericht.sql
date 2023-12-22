@@ -10,6 +10,7 @@ create table emensawerbeseite.gericht
     preisintern  double       not null,
     preisextern  double       not null
         check (`preisextern` >= `preisintern`),
+    bildname     varchar(200) null,
     constraint name
         unique (name),
     constraint name_2

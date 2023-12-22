@@ -8,6 +8,10 @@
 
 return array(
     '/emensa/public/'             => "MainPageController@mainPageController",
+    '/emensa/public/anmeldung' => 'AnmeldungController@anmeldung',
+    '/emensa/public/profil' => 'ProfilController@profil',
+    '/emensa/public/abmelden' => 'AnmeldungController@abmelden',
+    '/emensa/public/ver' => 'AnmeldungController@ver',
     "/emensa/public/demo"         => "DemoController@demo",
     '/dbconnect'    => 'DemoController@dbconnect',
     '/debug'        => 'HomeController@debug',

@@ -1,17 +1,26 @@
 @extends('layouts.layout_main_page')
 @section('überschrift', 'Ihre E-Mensa hat wieder geöffnet!')
-
-
 @section('header')
     <img src="img/mensa_logo.jpg" id="logo" alt="Mensa-Logo">
+
     <div class="headerlinks">
         <a href="#übersicht">Ankündigung</a>
         <a href="#newstab">Zahlen</a>
         <a href="#preistab">Speisen</a>
         <a href="#footer">Wichtig für uns</a>
-    </div>
-@endsection
 
+    </div>
+    <div class="profil-container">
+        <label id="label_anmeldung" > Angemeldet: @php  echo isset($_SESSION['name']) ? $_SESSION['name'] : 'nicht angemeldet';     @endphp </label>
+        @php
+          if(!empty($_SESSION['login'])){
+              echo  "<label id='abmelden' > Abmelden</label>";
+          }
+        @endphp
+
+    </div>
+
+@endsection
 
 @section('main-content')
 
@@ -59,7 +68,9 @@
                </tr>
 
         <tr>
-                <td colspan='3' class='bilder'> <img src='{{$bilder[$loop->iteration-1]}}' alt='{{$bilder[0]}}'></td>
+
+
+                <td colspan='3' class='bilder'><img id="noBild" src="{{$item['bildname']}}" alt=""> </td>
                 </tr>
 
         @endforeach
@@ -67,13 +78,20 @@
 
 
     </div>
+    <script>
+        // Event-Listener für das Klick-Ereignis auf das Label
+        document.getElementById('label_anmeldung').addEventListener('click', function () {
+            window.location.href = 'profil';
+        });
 
+        document.getElementById('abmelden').addEventListener('click', function () {
+            window.location.href = 'abmelden';
+        });
+    </script>
 
 @endsection
 
 
 @section('footer')
-    <p>&copy E-Mensa GmbH</p>
-    <p>Schwarz, Slusarczyk</p>
-    <p><a href="http://localhost:8080">Impressum</a></p>
+
 @endsection

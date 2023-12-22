@@ -4,7 +4,7 @@ const PUBLIC_DIRNAME = "public";
 const CONFIG_WEBROUTES = "/emensa/routes/web.php"; // like in laravel
 const CONFIG_DB = "/emensa/config/db.php";
 const ROUTER_VERSION = '0.8.2';
-
+session_start();
 assert_php_version('8.2.0');
 assert_path();
 
@@ -25,6 +25,9 @@ try {
 }
 
 use eftec\bladeone\BladeOne;
+use Monolog\Handler\StreamHandler;
+use Monolog\Level;
+use Monolog\Logger;
 
 /* Routing Script for PHP Dev Server */
 $verbosity = VERBOSITY;
@@ -267,6 +270,24 @@ function view($viewname, $viewargs = array())
 
     return $blade->run($viewname, $viewargs);
 }
+
+
+
+function logger($level)
+{
+    $log = new Logger('FrontloaderLogger');
+
+    if ($level === "warning") {
+        $log->pushHandler(new StreamHandler('../storage/logs.warning.log.txt', Logger::WARNING));
+    } elseif ($level === "info") {
+        $log->pushHandler(new StreamHandler('../storage\logs.info.log.txt', Logger::INFO));
+    }
+
+    return $log;
+}
+
+
+
 
 /**
  * let the script die if the php minimum version is not met.

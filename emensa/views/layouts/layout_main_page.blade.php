@@ -36,6 +36,10 @@
     @show
 </main>
 <footer id="footer">
+
+    <p>&copy E-Mensa GmbH</p>
+    <p>Schwarz, Slusarczyk</p>
+    <p><a href="http://localhost:8080">Impressum</a></p>
     @section('footer')
     @show
 </footer>
