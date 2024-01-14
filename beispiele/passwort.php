@@ -33,8 +33,9 @@ function create_admin($pw_)
 
     $link = db_anmelden();
     $pw = hashed_pw($pw_);
-    $sql = "INSERT INTO benutzer (id, name, email, passwort, admin, anzahlfehler, anzahlanmeldungen, letzteanmeldung, letzterfehler) 
-            VALUES ( 'SuperAdmin', 'admin@emensa.example', '$pw', 1, 0, 0, NULL, NULL)";
+
+    $sql = "INSERT INTO benutzer ( name, email, passwort, admin, anzahlfehler, anzahlanmeldungen, letzteanmeldung, letzterfehler, salt) 
+            VALUES ( 'SuperAdmin', 'admin@emensa.example', '$pw', 1, 0, 0, NULL, NULL, 'dada')";
 
 
     $result = mysqli_query($link, $sql);

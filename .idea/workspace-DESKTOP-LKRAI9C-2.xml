@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c67460a-705e-428c-a076-b9d9a1227d7b" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/emensa/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="C:\Users\herrd\OneDrive\Repository_Dennis\E-Mensa\emensa\bin\composer.phar" />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MigrationScriptOptions">
+    <option name="ignoreImplicitObjects" value="true" />
+    <option name="ignoreSourceCode" value="false" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/emensa/vendor/eftec/bladeone" />
+      <path value="$PROJECT_DIR$/emensa/vendor/composer" />
+      <path value="$PROJECT_DIR$/emensa/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/emensa/vendor/psr/log" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2Wr7ATO8hHmSFUX0rjQsrx9IbiT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Constants&quot;: &quot;false&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/herrd/OneDrive/Repository_Dennis/E-Mensa/emensawerbeseite/emensawerbeseite&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\herrd\OneDrive\Repository_Dennis\E-Mensa\emensa\models" />
+      <recent name="C:\Users\herrd\OneDrive\Repository_Dennis\E-Mensa\emensa\public\img\gerichte" />
+      <recent name="C:\Users\herrd\OneDrive\Repository_Dennis\E-Mensa\emensa\public\img" />
+      <recent name="C:\Users\herrd\OneDrive\Repository_Dennis\E-Mensa\emensa\views\examples\pages" />
+      <recent name="C:\Users\herrd\OneDrive\Repository_Dennis\E-Mensa\emensa\views\examples" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Built-in Web Server.Prakitum_Sever">
+    <configuration name="wunschgericht.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/emensawerbeseite/emensawerbeseite/wunschgericht.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration name="Prakitum_Sever" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" host="Localhost" port="5200">
+      <method v="2" />
+    </configuration>
+    <configuration name="m2_5d_array.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/E-Mensa/beispiele/m2_5d_array.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="meal.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/E-Mensa/beispiele/meal.php">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Database Script.wunschgericht.sql" />
+      <item itemvalue="PHP Built-in Web Server.Prakitum_Sever" />
+      <item itemvalue="PHP Script.m2_5d_array.php" />
+      <item itemvalue="PHP Script.meal.php" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.wunschgericht.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c67460a-705e-428c-a076-b9d9a1227d7b" name="Changes" comment="" />
+      <created>1697478702520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697478702520</updated>
+      <workItem from="1697478704626" duration="7876000" />
+      <workItem from="1697569068659" duration="2000" />
+      <workItem from="1697569098881" duration="1948000" />
+      <workItem from="1697578246454" duration="2319000" />
+      <workItem from="1698613259930" duration="619000" />
+      <workItem from="1698870393933" duration="1519000" />
+      <workItem from="1698946200166" duration="6795000" />
+      <workItem from="1699052636496" duration="267000" />
+      <workItem from="1699103620238" duration="14521000" />
+      <workItem from="1699133915465" duration="906000" />
+      <workItem from="1699194802716" duration="14615000" />
+      <workItem from="1699214377500" duration="8744000" />
+      <workItem from="1699223676323" duration="4306000" />
+      <workItem from="1699265889523" duration="4661000" />
+      <workItem from="1699347940433" duration="257000" />
+      <workItem from="1699348208884" duration="220000" />
+      <workItem from="1699353299721" duration="2549000" />
+      <workItem from="1699442114013" duration="10292000" />
+      <workItem from="1699469934211" duration="6048000" />
+      <workItem from="1699606393941" duration="885000" />
+      <workItem from="1699953455896" duration="11000" />
+      <workItem from="1699953497617" duration="91000" />
+      <workItem from="1699967245711" duration="4514000" />
+      <workItem from="1699972821312" duration="46000" />
+      <workItem from="1700039524476" duration="1242000" />
+      <workItem from="1700389531524" duration="4376000" />
+      <workItem from="1700406840903" duration="6331000" />
+      <workItem from="1700417357509" duration="960000" />
+      <workItem from="1700418367508" duration="1152000" />
+      <workItem from="1700419533001" duration="71000" />
+      <workItem from="1700420634694" duration="1286000" />
+      <workItem from="1700478276362" duration="1142000" />
+      <workItem from="1700560666400" duration="1625000" />
+      <workItem from="1700570362253" duration="15000" />
+      <workItem from="1700582388971" duration="13848000" />
+      <workItem from="1700668864349" duration="4000" />
+      <workItem from="1700668976787" duration="2055000" />
+      <workItem from="1700671695252" duration="9269000" />
+      <workItem from="1700700020193" duration="2032000" />
+      <workItem from="1700768120255" duration="2048000" />
+      <workItem from="1700943085951" duration="597000" />
+      <workItem from="1701165643902" duration="250000" />
+      <workItem from="1701169860130" duration="1880000" />
+      <workItem from="1701173979523" duration="376000" />
+      <workItem from="1701174482317" duration="701000" />
+      <workItem from="1701175737435" duration="352000" />
+      <workItem from="1701176615440" duration="1952000" />
+      <workItem from="1701371946988" duration="460000" />
+      <workItem from="1701873811797" duration="68000" />
+      <workItem from="1701874757361" duration="175000" />
+      <workItem from="1701875121413" duration="18000" />
+      <workItem from="1701875175852" duration="9714000" />
+      <workItem from="1701898246118" duration="5747000" />
+      <workItem from="1701904017694" duration="1103000" />
+      <workItem from="1701959426531" duration="630000" />
+      <workItem from="1701960082617" duration="1725000" />
+      <workItem from="1701961894612" duration="20460000" />
+      <workItem from="1702053825089" duration="874000" />
+      <workItem from="1702056499682" duration="47000" />
+      <workItem from="1702235692426" duration="194000" />
+      <workItem from="1702235934941" duration="256000" />
+      <workItem from="1702317176231" duration="1006000" />
+      <workItem from="1702322804693" duration="2000" />
+      <workItem from="1702328750728" duration="598000" />
+      <workItem from="1702382058918" duration="34000" />
+      <workItem from="1702386570622" duration="3597000" />
+      <workItem from="1702452667151" duration="5000" />
+      <workItem from="1702461538926" duration="596000" />
+      <workItem from="1702549991379" duration="28000" />
+      <workItem from="1702584272943" duration="6000" />
+      <workItem from="1702715367902" duration="331000" />
+      <workItem from="1702852715911" duration="6785000" />
+      <workItem from="1702923045869" duration="11077000" />
+      <workItem from="1702981958507" duration="2554000" />
+      <workItem from="1703015115434" duration="7625000" />
+      <workItem from="1703055838727" duration="6860000" />
+      <workItem from="1703083445642" duration="8735000" />
+      <workItem from="1703100009479" duration="6232000" />
+      <workItem from="1703155261096" duration="15000" />
+      <workItem from="1703193034829" duration="3993000" />
+      <workItem from="1703241876402" duration="1210000" />
+      <workItem from="1704736462403" duration="244000" />
+      <workItem from="1704736791929" duration="359000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -42,13 +42,13 @@ class  AnmeldungController{
                     $_SESSION['id']= $id;
                     set_letzteanmeldung($id,$date );
                     call_anzahlanmeldungen_procedure($id);
-                    set_anzahlfeher($id);
+                    //set_anzahlfeher($id);
                     $log = logger('info');
                     $log->info($_SESSION['name']." hat sich eingeloggt");
                     header('Location:/emensa/public/');
                     exit();
                 }else{
-
+                    set_anzahlfeher($id);
                     $log = logger('warning');
                     $log->warning($_SESSION['name']." fehlgeschlagener Logging!");
                     set_letzterfehler($id, $date);
@@ -63,6 +63,7 @@ class  AnmeldungController{
         } catch (Exception $e) {
 
             set_letzterfehler($id, $date);
+
             $_SESSION['error_msg'] = "Fehler beim Abrufen der Benutzer-ID.";
         }
 

@@ -1,1 +1,7 @@
 [2023-12-20T20:48:36.233068+00:00] name.WARNING: SuperAdmin fehlgeschlagener Logging! [] []
+[2024-01-08T18:07:38.857096+00:00] FrontloaderLogger.WARNING:  fehlgeschlagener Logging! [] []
+[2024-01-08T18:23:32.687669+00:00] FrontloaderLogger.WARNING: SuperAdmin fehlgeschlagener Logging! [] []
+[2024-01-08T18:24:14.381591+00:00] FrontloaderLogger.WARNING: SuperAdmin fehlgeschlagener Logging! [] []
+[2024-01-08T18:24:54.307522+00:00] FrontloaderLogger.WARNING: SuperAdmin fehlgeschlagener Logging! [] []
+[2024-01-09T13:16:44.555044+00:00] FrontloaderLogger.WARNING:  fehlgeschlagener Logging! [] []
+[2024-01-09T13:59:19.962001+00:00] FrontloaderLogger.WARNING:  fehlgeschlagener Logging! [] []
