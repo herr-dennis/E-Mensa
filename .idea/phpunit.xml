@@ -4,6 +4,7 @@
     <option name="directories">
       <list>
         <option value="$PROJECT_DIR$/emensa/tests" />
+        <option value="$PROJECT_DIR$/emensa/bin/vendor/brick/math/tests" />
       </list>
     </option>
   </component>

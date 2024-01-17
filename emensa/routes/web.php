@@ -8,6 +8,9 @@
 
 return array(
     '/emensa/public/'             => "MainPageController@mainPageController",
+    '/emensa/public/reg' => 'AnmeldungController@reg',
+    '/emensa/public/bewertungen' => 'BewertungController@bewertungen',
+    '/emensa/public/meineBewertung' => 'BewertungController@meineBewertung',
     '/emensa/public/anmeldung' => 'AnmeldungController@anmeldung',
     '/emensa/public/profil' => 'ProfilController@profil',
     '/emensa/public/abmelden' => 'AnmeldungController@abmelden',

@@ -4,6 +4,13 @@
 @section('title' ,'Anmeldung')
 @section('header')
 <img src="img/mensa_logo.jpg" id="logo" alt="Mensa-Logo">
+
+<script>
+    // JavaScript-Code für den Klick auf das Bild
+    document.getElementById('logo').addEventListener('click', function() {
+        window.location.href = '/emensa/public/'; // Hier die URL deiner Hauptseite einfügen
+    });
+</script>
 @endsection
 <hr>
 @section('main-content')
@@ -20,7 +27,7 @@
         <label id="wrong">{{ $msg }}</label>
 
     @endif
-
+    <a href="reg">Noch nicht registiert? Hier lang!</a>
     <script>
         function hide_text(input, placeholder) {
             if (input.value === placeholder) {

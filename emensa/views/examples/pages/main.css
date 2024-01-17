@@ -18,13 +18,30 @@ header a {
     padding: 19px;
 
 }
-
+table {
+     margin-top: 20px;
+    width: 600px;
+}
 .profil-container {
     display: flex;
     flex-direction: column;
     position: fixed;
      right: 15px;
 
+}
+@keyframes blink {
+    50% { color: transparent; }
+    100% { color: red; }
+}
+
+.ratedWords{
+    animation: blink 2s infinite;
+    position: relative;
+    bottom: -80px;
+    color: crimson;
+    transform: rotate(-2deg);
+    font-weight: bold; /* Fettdruck */
+    font-size: 18px;
 }
 
 .profil-container label{
@@ -110,12 +127,22 @@ footer p {
 
 form {
     display: flex;
+    width: 50%;
     flex-direction: column;
     margin-right: 50%;
     place-content: center;
 
 }
 
+.glowUp{
+
+    border: 4px solid grey;
+
+}
+
+p {
+    font-size: 20px;
+}
 #mensabild {
     display: grid;
     place-items: center;
@@ -129,7 +156,13 @@ form {
     width: 50%;
 
 }
+.formular{
 
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+}
 #head_bild {
 
     border: 4px solid slategrey;

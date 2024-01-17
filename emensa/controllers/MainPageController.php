@@ -1,14 +1,17 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/emensa/models/db_handling.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/emensa/models/take_img.php');
-
+require_once($_SERVER['DOCUMENT_ROOT'].'/emensa/models/Gerichte.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/emensa/models/Bewertungen.php');
 class MainPageController
 {
 
     public  function mainPageController(){
-
-        $data = take_meals();
-        $bilder = take_img(count($data)+7);
+        /**
+         * Hier wird das ORM benutzt!
+         */
+        $gerichte = new Gerichte();
+        $data = $gerichte::query()->get();
 
         if(isset($_SESSION['login'])){
             if($_SESSION['login']===true){
@@ -22,6 +25,11 @@ class MainPageController
         }
 
 
+        $BewertungObjekt = new Bewertungen();
+        $mealsRating = $BewertungObjekt::query()->join('gericht', 'gericht.id', '=', 'bewertungen.gerichtsID')
+            ->where('bewertungen.highlightRating', '=', 1)
+            ->get();
+
         /**
          * Aufbereitung der Bilder
          */
@@ -33,7 +41,7 @@ class MainPageController
             }
         }
 
-        return view('examples.pages.mainPage', ['data' => $data, 'bilder' => $bilder]  );
+        return view('examples.pages.mainPage', ['data' => $data , 'mealsRating'=>$mealsRating]  );
 
     }
 

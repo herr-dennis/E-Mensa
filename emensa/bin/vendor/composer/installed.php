@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'emensa/mvc',
+        'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
         'reference' => '6499016e614ec164c45b2219df43b09072af06fd',
@@ -10,6 +10,15 @@
         'dev' => true,
     ),
     'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '6499016e614ec164c45b2219df43b09072af06fd',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.11.0',
             'version' => '0.11.0.0',
@@ -34,24 +43,6 @@
             'reference' => '2930cd5ef353871c821d5c43ed030d39ac8cfe65',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/inflector',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'eftec/bladeone' => array(
-            'pretty_version' => '4.9',
-            'version' => '4.9.0.0',
-            'reference' => '019036c226086fbe7591360d260067c5d82400ca',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../eftec/bladeone',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'emensa/mvc' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '6499016e614ec164c45b2219df43b09072af06fd',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -118,15 +109,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'monolog/monolog' => array(
-            'pretty_version' => '3.5.0',
-            'version' => '3.5.0.0',
-            'reference' => 'c915e2634718dbc8a4a15c61b0e62e7a44e14448',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../monolog/monolog',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'nesbot/carbon' => array(
             'pretty_version' => '2.72.1',
             'version' => '2.72.1.0',
@@ -164,21 +146,6 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.1|2.0',
-            ),
-        ),
-        'psr/log' => array(
-            'pretty_version' => '3.0.0',
-            'version' => '3.0.0.0',
-            'reference' => 'fe5ea303b0887d5caefd3d431c3e61ad47037001',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../psr/log',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'psr/log-implementation' => array(
-            'dev_requirement' => false,
-            'provided' => array(
-                0 => '3.0.0',
             ),
         ),
         'psr/simple-cache' => array(

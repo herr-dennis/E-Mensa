@@ -24,11 +24,12 @@ try {
     echo "<code>DOCUMENT_ROOT</code><br><pre>{$_SERVER['DOCUMENT_ROOT']}</pre><code>Error</code><br><pre>" . $ex->getMessage() . "</pre>";
 }
 
+
 use eftec\bladeone\BladeOne;
 use Monolog\Handler\StreamHandler;
 use Monolog\Level;
 use Monolog\Logger;
-
+include '../config/orm.php';
 /* Routing Script for PHP Dev Server */
 $verbosity = VERBOSITY;
 if (preg_match('/\.(?:css|js|png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {

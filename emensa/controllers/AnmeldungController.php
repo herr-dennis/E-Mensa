@@ -45,8 +45,20 @@ class  AnmeldungController{
                     //set_anzahlfeher($id);
                     $log = logger('info');
                     $log->info($_SESSION['name']." hat sich eingeloggt");
-                    header('Location:/emensa/public/');
-                    exit();
+
+                    if($_SESSION['comeFrom']==='bewertung'){
+                        header('Location:/emensa/public/bewertungen');
+                        exit();
+                    }
+                    elseif ($_SESSION['comeFrom']==='meineBewertung'){
+                        header('Location:/emensa/public/meineBewertung');
+                        exit();
+                    }
+                    else{
+                        header('Location:/emensa/public/');
+                        exit();
+                    }
+
                 }else{
                     set_anzahlfeher($id);
                     $log = logger('warning');
@@ -87,7 +99,19 @@ class  AnmeldungController{
 
 
  }
+ public function reg(){
 
+
+        if(isset($_POST['name'])){
+         var_dump($_POST);
+            create_user($_POST['password'],$_POST['name'], $_POST['email']);
+
+        }
+
+
+      return view('examples.pages.reg');
+
+ }
 
 }
 

@@ -8,6 +8,8 @@
         <a href="#newstab">Zahlen</a>
         <a href="#preistab">Speisen</a>
         <a href="#footer">Wichtig für uns</a>
+        <a href='bewertungen'>Bewertungen</a>
+        <a href ='meineBewertung'> Meine Bewertungen</a>
 
     </div>
     <div class="profil-container">
@@ -44,17 +46,28 @@
         leo eget bibendum sodales, augue velit cursus nunc,
     </div>
 
-
     <div>
-        <table id="preistab">
-            <tr>
-                <th></th>
-                <th>Preis intern</th>
-                <th>Preis extern</th>
-            </tr>
+
 
         @foreach ($data as $item)
+                <table
+                @php
+                     $rated=false;
+                    foreach ($mealsRating as $key => $values){
+                        if($item['id']==$values['id']){
+                            echo "class=glowUp";
+                            $rated = true;
+                        }
 
+
+                    }
+                        @endphp
+                >
+                    <tr>
+                        <td rowspan="1" @if($rated) class="ratedWords" @endif> @if($rated) Wird empfohlen von unsere Küche! @endif </td>
+                        <td>Preis intern</td>
+                        <td>Preis extern</td>
+                    </tr>
          <tr>
             <td>{{$item['name']}}
                 </td>
@@ -73,11 +86,33 @@
                 <td colspan='3' class='bilder'><img id="noBild" src="{{$item['bildname']}}" alt=""> </td>
                 </tr>
 
+                @php
+
+   // Überprüfe, ob $_SESSION['login'] gesetzt ist
+   if (isset($_SESSION['login'])) {
+       // Überprüfe, ob $_SESSION['login'] einen Wahrheitswert enthält
+       if ($_SESSION['login']) {
+           // Wenn die Bedingungen erfüllt sind, gebe den HTML-Code für Bewertungen aus
+
+           $id = $item['id'];
+           echo "
+               <tr>
+                   <td colspan='3'>
+
+                       <a href='bewertungen?id=$id'>Bewertungen</a>
+                   </td>
+               </tr>
+           ";
+       }
+   }
+
+                @endphp
+
         @endforeach
         </table>
-
-
     </div>
+
+
     <script>
         // Event-Listener für das Klick-Ereignis auf das Label
         document.getElementById('label_anmeldung').addEventListener('click', function () {
