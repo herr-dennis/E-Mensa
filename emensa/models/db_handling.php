@@ -6,7 +6,7 @@ function db_anmelden() : mysqli{
     $link = mysqli_connect(
         "localhost", // Host der Datenbank
         "root", // Benutzername zur Anmeldung
-        "ihesp", // Passwort zur Anmeldung
+        "123", // Passwort zur Anmeldung
         "emensawerbeseite") // Auswahl der Datenbank
     ;
     if (!$link) {

@@ -7,6 +7,7 @@ create table emensawerbeseite.bewertungen
     bewertungszeitpunkt timestamp default current_timestamp() null,
     bewertungID         bigint auto_increment
         primary key,
+    highlightRating     tinyint(1)                            null,
     constraint bewertungen_ibfk_1
         foreign key (benutzerID) references emensawerbeseite.benutzer (id),
     constraint bewertungen_ibfk_2

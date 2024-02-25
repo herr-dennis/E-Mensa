@@ -30,6 +30,8 @@ class MainPageController
             ->where('bewertungen.highlightRating', '=', 1)
             ->get();
 
+        //$mealsRating = take_rating_meals();
+
         /**
          * Aufbereitung der Bilder
          */

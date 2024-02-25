@@ -7,7 +7,7 @@ $capsule->addConnection([
     "host" => "localhost",
     "database" => "emensawerbeseite",
     "username" => "root",
-    "password" => "ihesp"
+    "password" => "123"
 ]);
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
